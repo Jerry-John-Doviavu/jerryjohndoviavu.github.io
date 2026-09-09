@@ -1,5 +1,15 @@
 ---
 title: "About"
 ---
+## Background
 
-About this site
+I grew up and studied in Ghana, earning a BSc in Information and Communication Technology Education from the University of Education, Winneba, with First Class Honours. For the past decade I've worked as an ICT teacher and IT Coordinator at Agotime Senior High School, part of the Ghana Education Service — teaching Mathematics, Statistics, Probability, and ICT, managing school MIS systems, and supporting information security processes. Alongside teaching, I've co-founded and led community initiatives focused on expanding ICT access for rural and underserved youth, and on building entrepreneurship skills among young people.
+
+## Why Data Science
+
+Years of working with school data — attendance, performance, resource allocation — showed me how much untapped potential there is in applying rigorous analysis to education systems. I'm drawn to UBC's Master of Data Science for its interdisciplinary blend of statistics and computer science, and I'm especially looking forward to diving into data workflows, statistical inference, and the industry capstone. My goal is to bring these skills back to Ghana's education sector — building data pipelines and analytics that can support better resource allocation, teacher development, and student outcomes.
+
+## Outside of Data Science
+
+Beyond the classroom and the code, I care a lot about community and service — from leadership roles in student associations to volunteering with education and health outreach projects. I also enjoy sharing educational content on sustainability and the SDGs online, and I have a long-standing interest in how environmental issues affect communities back home. On weekends, you'll usually find me exploring something new, whether that's an idea, a place, or a skill.
+

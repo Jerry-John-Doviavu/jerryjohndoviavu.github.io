@@ -1,1 +1,10 @@
 # jerryjohndoviavu.github.io
+# Computing Platforms for Data Science - Milestone 1
+
+** Author: Jerry John Doviavu **
+
+## Introduction
+I recently moved to Canada from Ghana to join the MDS program at UBC - Vancouver. Before starting this journey, I completed my degree in ICT Education and worked as a Teacher where I focused on teaching basic IT concepts. Through the MDS program, I am hoping to master modern data science workflows, deepen my machine learning knowledge, and build a strong foundation for a career in tech.
+
+## Milestone Content
+This milestone content contains the introduction to MDS software and Bash. Here I am learning how to use the Bash terminal to navigate systems and automate tasks.
