@@ -9,16 +9,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Milestone 2",
+    "title": "Jerry John Doviavu",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "I recently moved to Canada from Ghana to join the MDS program at UBC - Vancouver. Before starting this journey, I completed my degree in ICT Education and worked as a Teacher where I focused on teaching basic IT concepts. Through the MDS program, I am hoping to master modern data science workflows, deepen my machine learning knowledge, and build a strong foundation for a career in tech."
   },
   {
     "objectID": "index.html#introduction",
     "href": "index.html#introduction",
     "title": "Jerry John Doviavu",
-    "section": "Introduction",
-    "text": "Introduction\nI recently moved to Canada from Ghana to join the MDS program at UBC - Vancouver. Before starting this journey, I completed my degree in ICT Education and worked as a Teacher where I focused on teaching basic IT concepts. Through the MDS program, I am hoping to master modern data science workflows, deepen my machine learning knowledge, and build a strong foundation for a career in tech."
+    "section": "",
+    "text": "I recently moved to Canada from Ghana to join the MDS program at UBC - Vancouver. Before starting this journey, I completed my degree in ICT Education and worked as a Teacher where I focused on teaching basic IT concepts. Through the MDS program, I am hoping to master modern data science workflows, deepen my machine learning knowledge, and build a strong foundation for a career in tech."
   },
   {
     "objectID": "index.html#milestone-content",
@@ -47,5 +47,12 @@
     "title": "About",
     "section": "Outside of Data Science",
     "text": "Outside of Data Science\nBeyond the classroom and the code, I care a lot about community and service — from leadership roles in student associations to volunteering with education and health outreach projects. I also enjoy sharing educational content on sustainability and the SDGs online, and I have a long-standing interest in how environmental issues affect communities back home. On weekends, you’ll usually find me exploring something new, whether that’s an idea, a place, or a skill."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "About a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.\nComing from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.\nThe first week of classes moved quickly—lectures, labs, and readings piled up before I had even fully unpacked. The pace was not a surprise; I had heard that the MDS program moves fast. What did surprise me was how collaborative it already feels. People are troubleshooting code together, comparing notes after class, and forming study groups.\nIf I am honest, I am still adjusting. A new city, a new academic rhythm, and new people all at once can feel overwhelming, and there is a quiet hum of nerves beneath the excitement. But I would rather feel that in week one than pretend I already have everything figured out.\nMore to come as the program picks up.\n\n\n\nOrientation week on campus."
   }
 ]

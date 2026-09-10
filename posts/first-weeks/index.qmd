@@ -1,0 +1,15 @@
+---
+title: "My first weeks in MDS"
+author: "Jerry John Doviavu"
+date: 2026-09-09
+![Orientation week on campus.](orientation.jpeg)
+---
+About a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.
+
+Coming from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.
+
+The first week of classes moved quickly—lectures, labs, and readings piled up before I had even fully unpacked. The pace was not a surprise; I had heard that the MDS program moves fast. What did surprise me was how collaborative it already feels. People are troubleshooting code together, comparing notes after class, and forming study groups.
+
+If I am honest, I am still adjusting. A new city, a new academic rhythm, and new people all at once can feel overwhelming, and there is a quiet hum of nerves beneath the excitement. But I would rather feel that in week one than pretend I already have everything figured out.
+
+More to come as the program picks up.
