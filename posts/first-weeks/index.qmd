@@ -2,8 +2,9 @@
 title: "My first weeks in MDS"
 author: "Jerry John Doviavu"
 date: 2026-09-09
-![Orientation week on campus.](orientation.jpeg)
 ---
+![Orientation day on campus.](posts/first-weeks/orientation.jpeg)
+
 About a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.
 
 Coming from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.
