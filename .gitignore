@@ -5,5 +5,5 @@
 
 /.quarto/
 .DS_Store
-_sites/
+_site/
 .venv
