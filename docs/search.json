@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Palmer Penguins Analysis with Python\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Global Life Expectancy with Gapminder\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\nNo matching items"
+    "text": "Palmer Penguins Analysis with Python\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nCombining R and Python in One Post\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Global Life Expectancy with Gapminder\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -26,6 +26,34 @@
     "title": "Jerry John Doviavu",
     "section": "Milestone Content",
     "text": "Milestone Content\nThis milestone content contains the introduction to MDS software and Bash. Here I am learning how to use the Bash terminal to navigate systems and automate tasks."
+  },
+  {
+    "objectID": "posts/both r and python/index.html",
+    "href": "posts/both r and python/index.html",
+    "title": "Combining R and Python in One Post",
+    "section": "",
+    "text": "library(reticulate)\nlibrary(ggplot2)\n\n# Point reticulate to project's virtual environment\nuse_virtualenv(\"../../.venv\", required = TRUE)"
+  },
+  {
+    "objectID": "posts/both r and python/index.html#process-data-in-python",
+    "href": "posts/both r and python/index.html#process-data-in-python",
+    "title": "Combining R and Python in One Post",
+    "section": "1. Process Data in Python",
+    "text": "1. Process Data in Python\n\nimport pandas as pd\n\n# Create a Python DataFrame\ndf_python = pd.DataFrame({\n    'category': ['A', 'B', 'C', 'D'],\n    'values': [10, 25, 15, 30]\n})"
+  },
+  {
+    "objectID": "posts/both r and python/index.html#pass-python-object-to-r-and-plot",
+    "href": "posts/both r and python/index.html#pass-python-object-to-r-and-plot",
+    "title": "Combining R and Python in One Post",
+    "section": "2. Pass Python Object to R and Plot",
+    "text": "2. Pass Python Object to R and Plot\n\n# Access the Python dataframe from R via the `py` object\ndf_r &lt;- py$df_python\n\n# Plot using ggplot2\nggplot(df_r, aes(x = category, y = values, fill = category)) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal() +\n  labs(\n    title = \"Data calculated in Python, plotted in R\",\n    x = \"Category\",\n    y = \"Values\"\n  )\n\n\n\n\n\n\n\nFigure 1: Data processed in Python and visualized with ggplot2 in R."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "Orientation day on campus.\n\n\nAbout a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.\nComing from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.\nThe first week of classes moved quickly—lectures, labs, and readings piled up before I had even fully unpacked. The pace was not a surprise; I had heard that the MDS program moves fast. What did surprise me was how collaborative it already feels. People are troubleshooting code together, comparing notes after class, and forming study groups.\nIf I am honest, I am still adjusting. A new city, a new academic rhythm, and new people all at once can feel overwhelming, and there is a quiet hum of nerves beneath the excitement. But I would rather feel that in week one than pretend I already have everything figured out.\nMore to come as the program picks up."
   },
   {
     "objectID": "posts/palmer-penguins-python/index.html",
@@ -53,7 +81,7 @@
     "href": "posts/palmer-penguins-python/index.html#penguins-body-mass-by-species",
     "title": "Palmer Penguins Analysis with Python",
     "section": "Penguins Body Mass By Species",
-    "text": "Penguins Body Mass By Species\n\n# Computational Chunk 2: Create boxplot visualization\nsns.set_theme(style=\"whitegrid\")\nsns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\nplt.title(\"Body Mass Distribution Across Penguin Species\")\nplt.xlabel(\"Species\")\nplt.ylabel(\"Body Mass (g)\")\nplt.show()\n\n/var/folders/15/2dq9jj9x3qvc5lvknbrgj3ph0000gn/T/ipykernel_44170/508123501.py:3: FutureWarning: \n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n\n  sns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\n\n\n\n\n\n\n\n\nFigure 1: Distribution of penguin body mass by species."
+    "text": "Penguins Body Mass By Species\n\n# Computational Chunk 2: Create boxplot visualization\nsns.set_theme(style=\"whitegrid\")\nsns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", hue=\"species\", palette=\"Set2\", legend=False)\nplt.title(\"Body Mass Distribution Across Penguin Species\")\nplt.xlabel(\"Species\")\nplt.ylabel(\"Body Mass (g)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of penguin body mass by species."
   },
   {
     "objectID": "posts/palmer-penguins-python/index.html#physical-measurement-summary",
@@ -61,13 +89,6 @@
     "title": "Palmer Penguins Analysis with Python",
     "section": "Physical Measurement Summary",
     "text": "Physical Measurement Summary\n\n# Computational Chunk 3: Compute summary table\npenguins_clean.groupby(\"species\")[[\"bill_length_mm\", \"bill_depth_mm\", \"flipper_length_mm\", \"body_mass_g\"]].mean()\n\n\n\nTable 1: Mean physical measurements by penguin species.\n\n\n\n\n\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\n\n\nspecies\n\n\n\n\n\n\n\n\nAdelie\n38.791391\n18.346358\n189.953642\n3700.662252\n\n\nChinstrap\n48.833824\n18.420588\n195.823529\n3733.088235\n\n\nGentoo\n47.504878\n14.982114\n217.186992\n5076.016260"
-  },
-  {
-    "objectID": "posts/first-weeks/index.html",
-    "href": "posts/first-weeks/index.html",
-    "title": "My first weeks in MDS",
-    "section": "",
-    "text": "Orientation day on campus.\n\n\nAbout a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.\nComing from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.\nThe first week of classes moved quickly—lectures, labs, and readings piled up before I had even fully unpacked. The pace was not a surprise; I had heard that the MDS program moves fast. What did surprise me was how collaborative it already feels. People are troubleshooting code together, comparing notes after class, and forming study groups.\nIf I am honest, I am still adjusting. A new city, a new academic rhythm, and new people all at once can feel overwhelming, and there is a quiet hum of nerves beneath the excitement. But I would rather feel that in week one than pretend I already have everything figured out.\nMore to come as the program picks up."
   },
   {
     "objectID": "posts/gapminder-r/index.html",

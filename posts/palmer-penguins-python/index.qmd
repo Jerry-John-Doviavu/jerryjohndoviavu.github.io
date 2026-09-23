@@ -37,7 +37,7 @@ penguins_clean = penguins.dropna(subset=['body_mass_g', 'species'])
 #| fig-cap: "Distribution of penguin body mass by species."
 # Computational Chunk 2: Create boxplot visualization
 sns.set_theme(style="whitegrid")
-sns.boxplot(data=penguins_clean, x="species", y="body_mass_g", palette="Set2")
+sns.boxplot(data=penguins_clean, x="species", y="body_mass_g", hue="species", palette="Set2", legend=False)
 plt.title("Body Mass Distribution Across Penguin Species")
 plt.xlabel("Species")
 plt.ylabel("Body Mass (g)")

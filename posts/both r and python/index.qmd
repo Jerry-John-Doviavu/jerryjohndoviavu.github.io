@@ -1,0 +1,48 @@
+---
+title: "Combining R and Python in One Post"
+author: "Jerry John Doviavu"
+date: "2026-09-22"
+categories: [R, Python, Reticulate]
+---
+
+```{r}
+#| message: false
+#| warning: false
+library(reticulate)
+library(ggplot2)
+
+# Point reticulate to project's virtual environment
+use_virtualenv("../../.venv", required = TRUE)
+```
+
+## 1. Process Data in Python
+
+```{python}
+import pandas as pd
+
+# Create a Python DataFrame
+df_python = pd.DataFrame({
+    'category': ['A', 'B', 'C', 'D'],
+    'values': [10, 25, 15, 30]
+})
+```
+
+## 2. Pass Python Object to R and Plot
+
+```{r}
+#| label: fig-reticulate-plot
+#| fig-cap: "Data processed in Python and visualized with ggplot2 in R."
+
+# Access the Python dataframe from R via the `py` object
+df_r <- py$df_python
+
+# Plot using ggplot2
+ggplot(df_r, aes(x = category, y = values, fill = category)) +
+  geom_col(show.legend = FALSE) +
+  theme_minimal() +
+  labs(
+    title = "Data calculated in Python, plotted in R",
+    x = "Category",
+    y = "Values"
+  )
+```
