@@ -53,7 +53,7 @@
     "href": "posts/palmer-penguins-python/index.html#penguins-body-mass-by-species",
     "title": "Palmer Penguins Analysis with Python",
     "section": "Penguins Body Mass By Species",
-    "text": "Penguins Body Mass By Species\n\n# Computational Chunk 2: Create boxplot visualization\nsns.set_theme(style=\"whitegrid\")\nsns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\nplt.title(\"Body Mass Distribution Across Penguin Species\")\nplt.xlabel(\"Species\")\nplt.ylabel(\"Body Mass (g)\")\nplt.show()\n\n/var/folders/15/2dq9jj9x3qvc5lvknbrgj3ph0000gn/T/ipykernel_39350/508123501.py:3: FutureWarning: \n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n\n  sns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\n\n\n\n\n\n\n\n\nFigure 1: Distribution of penguin body mass by species."
+    "text": "Penguins Body Mass By Species\n\n# Computational Chunk 2: Create boxplot visualization\nsns.set_theme(style=\"whitegrid\")\nsns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\nplt.title(\"Body Mass Distribution Across Penguin Species\")\nplt.xlabel(\"Species\")\nplt.ylabel(\"Body Mass (g)\")\nplt.show()\n\n/var/folders/15/2dq9jj9x3qvc5lvknbrgj3ph0000gn/T/ipykernel_44170/508123501.py:3: FutureWarning: \n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n\n  sns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\n\n\n\n\n\n\n\n\nFigure 1: Distribution of penguin body mass by species."
   },
   {
     "objectID": "posts/palmer-penguins-python/index.html#physical-measurement-summary",
@@ -74,14 +74,35 @@
     "href": "posts/gapminder-r/index.html",
     "title": "Exploring Global Life Expectancy with Gapminder",
     "section": "",
-    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)\n\n\n# Computational Chunk 1: Filter modern data post-1980\ngapminder_modern &lt;- gapminder |&gt;\n  filter(year &gt;= 1980)\n\n\n# Computational Chunk 2: Create life expectancy visualization\ngapminder_modern |&gt;\n  group_by(continent, year) |&gt;\n  summarize(mean_lifeExp = mean(lifeExp), .groups = \"drop\") |&gt;\n  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Mean Life Expectancy by Continent\", x = \"Year\", y = \"Life Expectancy (Years)\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Life expectancy over time across continents (1980–2007).\n\n\n\n\n\n\n\n\nTable 1: Summary of average GDP per capita and life expectancy in 2007.\n\n\n# Computational Chunk 3: Compute summary table\ngapminder |&gt;\n  filter(year == 2007) |&gt;\n  group_by(continent) |&gt;\n  summarize(\n    avg_gdp = round(mean(gdpPercap), 2),\n    avg_life_exp = round(mean(lifeExp), 1)\n  )\n\n# A tibble: 5 × 3\n  continent avg_gdp avg_life_exp\n  &lt;fct&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1 Africa      3089.         54.8\n2 Americas   11003.         73.6\n3 Asia       12473.         70.7\n4 Europe     25054.         77.6\n5 Oceania    29810.         80.7"
+    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)"
   },
   {
     "objectID": "posts/gapminder-r/index.html#data-source",
     "href": "posts/gapminder-r/index.html#data-source",
     "title": "Exploring Global Life Expectancy with Gapminder",
     "section": "",
-    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)\n\n\n# Computational Chunk 1: Filter modern data post-1980\ngapminder_modern &lt;- gapminder |&gt;\n  filter(year &gt;= 1980)\n\n\n# Computational Chunk 2: Create life expectancy visualization\ngapminder_modern |&gt;\n  group_by(continent, year) |&gt;\n  summarize(mean_lifeExp = mean(lifeExp), .groups = \"drop\") |&gt;\n  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Mean Life Expectancy by Continent\", x = \"Year\", y = \"Life Expectancy (Years)\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Life expectancy over time across continents (1980–2007).\n\n\n\n\n\n\n\n\nTable 1: Summary of average GDP per capita and life expectancy in 2007.\n\n\n# Computational Chunk 3: Compute summary table\ngapminder |&gt;\n  filter(year == 2007) |&gt;\n  group_by(continent) |&gt;\n  summarize(\n    avg_gdp = round(mean(gdpPercap), 2),\n    avg_life_exp = round(mean(lifeExp), 1)\n  )\n\n# A tibble: 5 × 3\n  continent avg_gdp avg_life_exp\n  &lt;fct&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1 Africa      3089.         54.8\n2 Americas   11003.         73.6\n3 Asia       12473.         70.7\n4 Europe     25054.         77.6\n5 Oceania    29810.         80.7"
+    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#data-preparation",
+    "href": "posts/gapminder-r/index.html#data-preparation",
+    "title": "Exploring Global Life Expectancy with Gapminder",
+    "section": "Data Preparation",
+    "text": "Data Preparation\n\n# Computational Chunk 1: Filter modern data post-1980\ngapminder_modern &lt;- gapminder |&gt;\n  filter(year &gt;= 1980)"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#global-life-expectancy-trends",
+    "href": "posts/gapminder-r/index.html#global-life-expectancy-trends",
+    "title": "Exploring Global Life Expectancy with Gapminder",
+    "section": "Global Life Expectancy Trends",
+    "text": "Global Life Expectancy Trends\n\n# Computational Chunk 2: Create life expectancy visualization\ngapminder_modern |&gt;\n  group_by(continent, year) |&gt;\n  summarize(mean_lifeExp = mean(lifeExp), .groups = \"drop\") |&gt;\n  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Mean Life Expectancy by Continent\", x = \"Year\", y = \"Life Expectancy (Years)\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Life expectancy over time across continents (1980–2007)."
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#summary-statistics",
+    "href": "posts/gapminder-r/index.html#summary-statistics",
+    "title": "Exploring Global Life Expectancy with Gapminder",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n\n\nTable 1: Summary of average GDP per capita and life expectancy in 2007.\n\n\n# Computational Chunk 3: Compute summary table\ngapminder |&gt;\n  filter(year == 2007) |&gt;\n  group_by(continent) |&gt;\n  summarize(\n    avg_gdp = round(mean(gdpPercap), 2),\n    avg_life_exp = round(mean(lifeExp), 1)\n  )\n\n# A tibble: 5 × 3\n  continent avg_gdp avg_life_exp\n  &lt;fct&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1 Africa      3089.         54.8\n2 Americas   11003.         73.6\n3 Asia       12473.         70.7\n4 Europe     25054.         77.6\n5 Oceania    29810.         80.7"
   },
   {
     "objectID": "about.html",
