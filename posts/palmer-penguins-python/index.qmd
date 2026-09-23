@@ -1,0 +1,54 @@
+---
+title: "Palmer Penguins Analysis with Python"
+author: "Jerry John Doviavu"
+date: "2026-09-22"
+categories: [Python, Seaborn, Penguins]
+---
+
+## Data Source
+
+Data provided by the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package (CC0 License).
+
+```{python}
+#| label: python-setup
+#| message: false
+#| warning: false
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+```
+
+## Data Cleaning
+
+```{python}
+#| label: python-clean
+# Computational Chunk 1: Clean missing values for plotting
+penguins_clean = penguins.dropna(subset=['body_mass_g', 'species'])
+
+```
+
+## Penguins Body Mass By Species
+
+```{python}
+#| label: fig-penguin-mass
+#| fig-cap: "Distribution of penguin body mass by species."
+# Computational Chunk 2: Create boxplot visualization
+sns.set_theme(style="whitegrid")
+sns.boxplot(data=penguins_clean, x="species", y="body_mass_g", palette="Set2")
+plt.title("Body Mass Distribution Across Penguin Species")
+plt.xlabel("Species")
+plt.ylabel("Body Mass (g)")
+plt.show()
+```
+
+## Physical Measurement Summary
+
+```{python}
+#| label: tbl-penguin-summary
+#| tbl-cap: "Mean physical measurements by penguin species."
+# Computational Chunk 3: Compute summary table
+penguins_clean.groupby("species")[["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"]].mean()
+```

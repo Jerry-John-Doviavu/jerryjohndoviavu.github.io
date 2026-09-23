@@ -1,0 +1,58 @@
+---
+title: "Exploring Global Life Expectancy with Gapminder"
+author: "Jerry John Doviavu"
+date: "2026-09-22"
+categories: [R, Gapminder, Data Analysis]
+---
+
+## Data Source
+
+This analysis uses the [Gapminder dataset](https://www.gapminder.org/data/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+library(tidyverse)
+library(gapminder)
+```
+
+## Data Preparation
+
+```{r}
+#| label: filter-modern-data
+# Computational Chunk 1: Filter modern data post-1980
+gapminder_modern <- gapminder |>
+  filter(year >= 1980)
+```
+
+## Global Life Expectancy Trends
+
+```{r}
+#| label: fig-life-exp
+#| fig-cap: "Life expectancy over time across continents (1980–2007)."
+# Computational Chunk 2: Create life expectancy visualization
+gapminder_modern |>
+  group_by(continent, year) |>
+  summarize(mean_lifeExp = mean(lifeExp), .groups = "drop") |>
+  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +
+  geom_line(linewidth = 1) +
+  labs(title = "Mean Life Expectancy by Continent", x = "Year", y = "Life Expectancy (Years)") +
+  theme_minimal()
+```
+
+## Summary Statistics
+
+```{r}
+#| label: tbl-recent-stats
+#| tbl-cap: "Summary of average GDP per capita and life expectancy in 2007."
+# Computational Chunk 3: Compute summary table
+gapminder |>
+  filter(year == 2007) |>
+  group_by(continent) |>
+  summarize(
+    avg_gdp = round(mean(gdpPercap), 2),
+    avg_life_exp = round(mean(lifeExp), 1)
+  )
+
+```

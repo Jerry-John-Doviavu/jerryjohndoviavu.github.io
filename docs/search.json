@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\nNo matching items"
+    "text": "Palmer Penguins Analysis with Python\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Global Life Expectancy with Gapminder\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJerry John Doviavu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -28,11 +28,60 @@
     "text": "Milestone Content\nThis milestone content contains the introduction to MDS software and Bash. Here I am learning how to use the Bash terminal to navigate systems and automate tasks."
   },
   {
+    "objectID": "posts/palmer-penguins-python/index.html",
+    "href": "posts/palmer-penguins-python/index.html",
+    "title": "Palmer Penguins Analysis with Python",
+    "section": "",
+    "text": "Data provided by the palmerpenguins package (CC0 License).\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom palmerpenguins import load_penguins\n\npenguins = load_penguins()"
+  },
+  {
+    "objectID": "posts/palmer-penguins-python/index.html#data-source",
+    "href": "posts/palmer-penguins-python/index.html#data-source",
+    "title": "Palmer Penguins Analysis with Python",
+    "section": "",
+    "text": "Data provided by the palmerpenguins package (CC0 License).\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom palmerpenguins import load_penguins\n\npenguins = load_penguins()"
+  },
+  {
+    "objectID": "posts/palmer-penguins-python/index.html#data-cleaning",
+    "href": "posts/palmer-penguins-python/index.html#data-cleaning",
+    "title": "Palmer Penguins Analysis with Python",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\n# Computational Chunk 1: Clean missing values for plotting\npenguins_clean = penguins.dropna(subset=['body_mass_g', 'species'])"
+  },
+  {
+    "objectID": "posts/palmer-penguins-python/index.html#penguins-body-mass-by-species",
+    "href": "posts/palmer-penguins-python/index.html#penguins-body-mass-by-species",
+    "title": "Palmer Penguins Analysis with Python",
+    "section": "Penguins Body Mass By Species",
+    "text": "Penguins Body Mass By Species\n\n# Computational Chunk 2: Create boxplot visualization\nsns.set_theme(style=\"whitegrid\")\nsns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\nplt.title(\"Body Mass Distribution Across Penguin Species\")\nplt.xlabel(\"Species\")\nplt.ylabel(\"Body Mass (g)\")\nplt.show()\n\n/var/folders/15/2dq9jj9x3qvc5lvknbrgj3ph0000gn/T/ipykernel_39350/508123501.py:3: FutureWarning: \n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n\n  sns.boxplot(data=penguins_clean, x=\"species\", y=\"body_mass_g\", palette=\"Set2\")\n\n\n\n\n\n\n\n\nFigure 1: Distribution of penguin body mass by species."
+  },
+  {
+    "objectID": "posts/palmer-penguins-python/index.html#physical-measurement-summary",
+    "href": "posts/palmer-penguins-python/index.html#physical-measurement-summary",
+    "title": "Palmer Penguins Analysis with Python",
+    "section": "Physical Measurement Summary",
+    "text": "Physical Measurement Summary\n\n# Computational Chunk 3: Compute summary table\npenguins_clean.groupby(\"species\")[[\"bill_length_mm\", \"bill_depth_mm\", \"flipper_length_mm\", \"body_mass_g\"]].mean()\n\n\n\nTable 1: Mean physical measurements by penguin species.\n\n\n\n\n\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\n\n\nspecies\n\n\n\n\n\n\n\n\nAdelie\n38.791391\n18.346358\n189.953642\n3700.662252\n\n\nChinstrap\n48.833824\n18.420588\n195.823529\n3733.088235\n\n\nGentoo\n47.504878\n14.982114\n217.186992\n5076.016260"
+  },
+  {
     "objectID": "posts/first-weeks/index.html",
     "href": "posts/first-weeks/index.html",
     "title": "My first weeks in MDS",
     "section": "",
     "text": "Orientation day on campus.\n\n\nAbout a month ago, I landed in Vancouver to begin UBC’s Master of Data Science program, and orientation week already feels like a blur. Between campus tours, software installations, and figuring out bus routes, the moment that stayed with me most was meeting my cohort.\nComing from an education background, I was not entirely sure what to expect. I have often thought of myself as a bit of a loner, but a few conversations in that room quickly changed the story. I found myself surrounded by people with rich and diverse experiences, all drawn here by a shared goal: making sense of data and using it to do something meaningful.\nThe first week of classes moved quickly—lectures, labs, and readings piled up before I had even fully unpacked. The pace was not a surprise; I had heard that the MDS program moves fast. What did surprise me was how collaborative it already feels. People are troubleshooting code together, comparing notes after class, and forming study groups.\nIf I am honest, I am still adjusting. A new city, a new academic rhythm, and new people all at once can feel overwhelming, and there is a quiet hum of nerves beneath the excitement. But I would rather feel that in week one than pretend I already have everything figured out.\nMore to come as the program picks up."
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html",
+    "href": "posts/gapminder-r/index.html",
+    "title": "Exploring Global Life Expectancy with Gapminder",
+    "section": "",
+    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)\n\n\n# Computational Chunk 1: Filter modern data post-1980\ngapminder_modern &lt;- gapminder |&gt;\n  filter(year &gt;= 1980)\n\n\n# Computational Chunk 2: Create life expectancy visualization\ngapminder_modern |&gt;\n  group_by(continent, year) |&gt;\n  summarize(mean_lifeExp = mean(lifeExp), .groups = \"drop\") |&gt;\n  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Mean Life Expectancy by Continent\", x = \"Year\", y = \"Life Expectancy (Years)\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Life expectancy over time across continents (1980–2007).\n\n\n\n\n\n\n\n\nTable 1: Summary of average GDP per capita and life expectancy in 2007.\n\n\n# Computational Chunk 3: Compute summary table\ngapminder |&gt;\n  filter(year == 2007) |&gt;\n  group_by(continent) |&gt;\n  summarize(\n    avg_gdp = round(mean(gdpPercap), 2),\n    avg_life_exp = round(mean(lifeExp), 1)\n  )\n\n# A tibble: 5 × 3\n  continent avg_gdp avg_life_exp\n  &lt;fct&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1 Africa      3089.         54.8\n2 Americas   11003.         73.6\n3 Asia       12473.         70.7\n4 Europe     25054.         77.6\n5 Oceania    29810.         80.7"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#data-source",
+    "href": "posts/gapminder-r/index.html#data-source",
+    "title": "Exploring Global Life Expectancy with Gapminder",
+    "section": "",
+    "text": "This analysis uses the Gapminder dataset, licensed under CC BY 4.0.\n\nlibrary(tidyverse)\nlibrary(gapminder)\n\n\n# Computational Chunk 1: Filter modern data post-1980\ngapminder_modern &lt;- gapminder |&gt;\n  filter(year &gt;= 1980)\n\n\n# Computational Chunk 2: Create life expectancy visualization\ngapminder_modern |&gt;\n  group_by(continent, year) |&gt;\n  summarize(mean_lifeExp = mean(lifeExp), .groups = \"drop\") |&gt;\n  ggplot(aes(x = year, y = mean_lifeExp, color = continent)) +\n  geom_line(linewidth = 1) +\n  labs(title = \"Mean Life Expectancy by Continent\", x = \"Year\", y = \"Life Expectancy (Years)\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Life expectancy over time across continents (1980–2007).\n\n\n\n\n\n\n\n\nTable 1: Summary of average GDP per capita and life expectancy in 2007.\n\n\n# Computational Chunk 3: Compute summary table\ngapminder |&gt;\n  filter(year == 2007) |&gt;\n  group_by(continent) |&gt;\n  summarize(\n    avg_gdp = round(mean(gdpPercap), 2),\n    avg_life_exp = round(mean(lifeExp), 1)\n  )\n\n# A tibble: 5 × 3\n  continent avg_gdp avg_life_exp\n  &lt;fct&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1 Africa      3089.         54.8\n2 Americas   11003.         73.6\n3 Asia       12473.         70.7\n4 Europe     25054.         77.6\n5 Oceania    29810.         80.7"
   },
   {
     "objectID": "about.html",
